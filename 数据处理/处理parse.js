@@ -1,4 +1,7 @@
-
+//  软通动力的面试题 写一个处理数据的函数 目前能力有限 有待再优化
+//  公交线路从小到大排列 
+//  地铁在公交后 地铁号从小到大排列 
+//  机场线路及其他 在最后 按字符从短到长排列
 const res = {
   data: {
     linedetails: {
@@ -51,7 +54,7 @@ function parse (res) {
         arr2.push(itemName[0])
       }else if(itemName[0].indexOf('地铁') !==-1){
         arr3.push(itemName[0])
-      }else if(itemName[0].indexOf('机场') !==-1){
+      }else{
         arr4.push(itemName[0]) 
       }
     }
@@ -70,7 +73,7 @@ function parse (res) {
               arr[i] = arr[j]
               arr[j] = c
             }
-          }else if(arr[i].indexOf('机场') !==-1){
+          }else{
             if(arr[i].length>arr[j].length){
               const c =  arr[i]
               arr[i] = arr[j]
